@@ -42,9 +42,14 @@ Download the All the files from repository and the copy 'img' folder and "JQuery
 ```
 
 ## Basic Usage
+
+Add a HTML DOM element to your page Ex: Shown below
 ```html
   <div id="testId"></div>
 ```
+
+Then simply bind the uploader to the added element as shown below
+
 ```javascript
   $('#testId').JSAjaxFileUploader({
         uploadUrl:'uploadImagesAction'
