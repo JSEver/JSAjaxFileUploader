@@ -36,6 +36,6 @@ Installation
 
 Download the All the files from repository and the copy 'img' folder and "JQuery.JSAjaxFileUploader.css" and "JQuery.JSAjaxFileUploader.js" or "JQuery.JSAjaxFileUploader.min.js" to you project folder and include scripts after the jQuery library
 
-`<script src="/path/to/jquery.cookie.js"></script><br />
-<link href="/path/to/JQuery.JSAjaxFileUploader.css" rel="stylesheet" type="text/css" />`
+`<script src="/path/to/jquery.cookie.js"></script>`
+`<link href="/path/to/JQuery.JSAjaxFileUploader.css" rel="stylesheet" type="text/css" />`
 
