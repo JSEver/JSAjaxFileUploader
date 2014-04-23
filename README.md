@@ -3,7 +3,7 @@ JSAjaxFileUploader
 
 JSAjaxFileUploader is a jQuery Plugin with ease of use. Just Download the  plugin include it in your project and thats it you are all set to use it.
 
-Features:
+## Features:
 
 1. Plug And Play Setup
 
@@ -32,10 +32,28 @@ Features:
 10. More over Absolutly FREE and much more…
 
 
-Installation
+## Installation
 
 Download the All the files from repository and the copy 'img' folder and "JQuery.JSAjaxFileUploader.css" and "JQuery.JSAjaxFileUploader.js" or "JQuery.JSAjaxFileUploader.min.js" to you project folder and include scripts after the jQuery library
 
-`<script src="/path/to/jquery.cookie.js"></script>`
-`<link href="/path/to/JQuery.JSAjaxFileUploader.css" rel="stylesheet" type="text/css" />`
+```html
+  <script src="/path/to/jquery.cookie.js"></script>
+  <link href="/path/to/JQuery.JSAjaxFileUploader.css" rel="stylesheet" type="text/css" />
+```
 
+## Basic Usage
+```html
+  <div id="testId"></div>
+```
+```javascript
+  $('#testId').JSAjaxFileUploader({
+        uploadUrl:'uploadImagesAction'
+    });
+```
+
+For more Advanced usage please check the demo files
+
+For any Comments, suggestions, queries or to request for a new jQuery Plugin visit http://jseverblog.wordpress.com/
+
+## Authors
+JS Ever
