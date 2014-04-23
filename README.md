@@ -3,6 +3,11 @@ JSAjaxFileUploader
 
 JSAjaxFileUploader is a jQuery Plugin with ease of use. Just Download the  plugin include it in your project and thats it you are all set to use it.
 
+Fully customizable with many options. using  JSAjaxFileUploader jQuery plugin you can have multiple upload forms in a same web page at the same time and you can also select multiple files for upload.
+
+Using JSAjaxFileUploader jQuery plugin you can enable large view of the image during file upload to the end user and the image size again is customizable. below are some of the important features of JSAjaxFileUploader jQuery plugin.
+
+
 ## Features:
 
 1. Plug And Play Setup
@@ -58,7 +63,7 @@ Then simply bind the uploader to the added element as shown below
 
 For more Advanced usage please check the demo file online here http://jseverdemo.0fees.net/JSAjaxFileUploader/Demo.html
 
-For any Comments, suggestions, queries or to request for a new jQuery Plugin visit http://jseverblog.wordpress.com/
+For any Comments, suggestions, queries or to request for a new jQuery Plugin visit http://jsever.blogspot.in/
 
 ## Authors
 JS Ever
