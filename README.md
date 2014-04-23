@@ -56,7 +56,7 @@ Then simply bind the uploader to the added element as shown below
     });
 ```
 
-For more Advanced usage please check the demo files
+For more Advanced usage please check the demo file online here http://jseverdemo.0fees.net/JSAjaxFileUploader/Demo.html
 
 For any Comments, suggestions, queries or to request for a new jQuery Plugin visit http://jseverblog.wordpress.com/
 
