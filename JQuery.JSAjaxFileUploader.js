@@ -23,8 +23,8 @@ THE SOFTWARE.*/
  var defaults = {
 	uploadUrl:null,
 	fileName:'file',
-    inputText:'Select Files...',
-    formData:{},
+    	inputText:'Select Files...',
+    	formData:{},
 	allowExt: 'gif|jpg|jpeg|png|bmp|mp4|mp3|pdf|doc|docx|xcl|txt',
 	maxFileSize: 5242880,	//default 5 MB
 	beforesend:function(file){},
