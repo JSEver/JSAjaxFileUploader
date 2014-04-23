@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="JQuery.JSAjaxFileUploader.js"></script>
+    <link href="JQuery.JSAjaxFileUploader.css" rel="stylesheet" type="text/css" />
+<style>
+
+</style>
+
+	</head>
+	<body>
+	<div id="testId"></div>
+	</body>
+	<script type="text/javascript">
+		$('#testId').JSAjaxFileUploader({
+            uploadUrl:'uploadImagesAction',
+		    inputText:'Select Your File',
+		    fileName:'photo',
+		    formData:{field1:'value1',field2:'value2',fieldN:'valueN'},
+		    maxFileSize:240090,
+		    zoomPreview:true,
+			zoomWidth:260,
+			zoomHeight:260
+        });
+	</script>
+</html>
