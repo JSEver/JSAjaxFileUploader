@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="JQuery.JSAjaxFileUploader.js"></script>
+    <link href="JQuery.JSAjaxFileUploader.css" rel="stylesheet" type="text/css" />
+	<script>
+		window.onerror = function(message, url, lineNumber) {
+			console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+		}
+	</script>
+	</head>
+<style>
+
+</style>
+
+	</head>
+	<body>
+		<h4>Demo</h4>
+		<ul>
+			<li><a href="#div1">Basic Uploader</a></li>
+			<li><a href="#div2">Custom file selector Name</a></li>
+			<li><a href="#div3">Upload with custom file name</a></li>
+			<li><a href="#div4">Restrict file types and file size</a></li>
+			<li><a href="#div5">Upload with form data</a></li>
+			<li><a href="#div6">Custom Animation Speed</a></li>
+			<li><a href="#div7">Enable/Disable Enlarged image preview</a></li>
+			<li><a href="#div8">Advance File Upload Control</a></li>
+		</ul>
+
+		<div id="div1">
+			<a href="#div1">Basic Uploader</a>
+			<div id="target-div1"></div>
+			<script>
+				$('#target-div1').JSAjaxFileUploader({uploadUrl:'upload.php'});
+			</script>
+		</div>
+		<hr></hr>
+		<div id="div2">
+		<a href="#div2">Custom file selector Name</a>
+			<div id="target-div2"></div>
+			<script>
+				$('#target-div2').JSAjaxFileUploader({
+					uploadUrl:'upload.php',
+					inputText:'Pick your file for upload...'
+				});
+			</script>
+		</div>
+		<hr></hr>
+		<div id="div3">
+		<a href="#div3">Upload with custom file name</a>
+			<div id="target-div3"></div>
+			<script>
+				$('#target-div3').JSAjaxFileUploader({
+					uploadUrl:'upload.php',
+					fileName:'userFile'
+				});
+			</script>
+		</div>
+		<hr></hr>
+		<div id="div4">
+		<a href="#div4">Restrict file types and file size</a>
+			<div id="target-div4"></div>
+			<script>
+				$('#target-div4').JSAjaxFileUploader({
+					uploadUrl:'upload.php',
+					maxFileSize:512000,	//Max 500 KB file
+					allowExt: 'gif|jpg|jpeg|png'	//allowing only images for upload
+				});
+			</script>
+		</div>
+		<hr></hr>
+		<div id="div5">
+		<a href="#div5">Upload with form data</a>
+			<div id="target-div5"></div>
+			<script>
+				$('#target-div5').JSAjaxFileUploader({
+					uploadUrl:'upload.php',
+					formData:{field1:'value1',field2:'value2',fieldN:'valueN'}
+				});
+			</script>
+		</div>
+		<hr></hr>
+		<div id="div6">
+		<a href="#div6">Custom Animation Speed</a>
+			<div id="target-div6"></div>
+			<script>
+				$('#target-div6').JSAjaxFileUploader({
+					uploadUrl:'upload.php',
+					closeAnimationSpeed: 1000 //In milli seconds 1000 ms = 1 second
+				});
+			</script>
+		</div>
+		<hr></hr>
+		<div id="div7">
+		<a href="#div7">Enable/Disable Enlarged image preview</a>
+			<div id="target-div7"></div>
+			<script>
+				$('#target-div7').JSAjaxFileUploader({
+					uploadUrl:'upload.php',
+					zoomPreview:true,
+					zoomWidth:360,
+					zoomHeight:360
+				});
+			</script>
+		</div>
+		<hr></hr>
+		<div id="div8">
+		<a href="#div8">Advance File Upload Control</a>
+			<div id="target-div8"></div>
+			<script>
+				$('#target-div8').JSAjaxFileUploader({
+					uploadUrl:'upload.php',
+					beforesend:function(file){$('#result').append('Before Send Executed : File -> '+JSON.stringify(file)+'<br /><br />');},
+					always:function(file){$('#result').append('Always Executed : File -> '+JSON.stringify(file)+'<br /><br />');},
+					done:function(file,xhr){$('#result').append('Done Executed : File -> '+JSON.stringify(file)+'<br /><br />');},
+					fail:function(response){$('#result').append('Fail Send Executed : response -> '+response+'<br /><br />');},
+					complete:function(file,xhr){$('#result').append('Complete Executed : File -> '+JSON.stringify(file)+'<br /><br />');}, 
+					success:function(response){$('#result').append('Success Executed : response -> '+response+'<br /><br />');}, 
+					error:function(response){$('#result').append('Error Executed : response -> '+response+'<br /><br />');}
+				});
+			</script>
+			<div id="result" style="height: 170px;overflow: auto;"></div>
+		</div>
+	</body>
+</html>
