@@ -11,7 +11,30 @@
 	</script>
 	</head>
 <style>
-
+.codeDiv{
+	border: 1px solid rgb(146, 146, 146);
+	background: rgb(236, 236, 236);
+	padding: 2px 20px;
+}
+.demoContainer{
+	padding: 5px;
+	border: 1px solid gray;
+	background: rgb(233, 233, 233);
+}
+.demoContainer a{
+	font-size: 20px;
+	text-decoration: inherit;
+	color: crimson;
+}
+#result{
+	height: 170px;
+	overflow: auto;
+	width: 80%;
+	margin: 2% 10%;
+	border: 1px solid;
+	background: black;
+	color: wheat;
+}
 </style>
 
 	</head>
@@ -28,16 +51,39 @@
 			<li><a href="#div8">Advance File Upload Control</a></li>
 		</ul>
 
-		<div id="div1">
+		<div id="div1" class="demoContainer">
 			<a href="#div1">Basic Uploader</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div1"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div1').JSAjaxFileUploader({
+			uploadUrl:'upload.php'
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
 			<div id="target-div1"></div>
 			<script>
 				$('#target-div1').JSAjaxFileUploader({uploadUrl:'upload.php'});
 			</script>
 		</div>
 		<hr></hr>
-		<div id="div2">
+		<div id="div2" class="demoContainer">
 		<a href="#div2">Custom file selector Name</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div2"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div2').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			inputText:'Pick your file for upload...'
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
 			<div id="target-div2"></div>
 			<script>
 				$('#target-div2').JSAjaxFileUploader({
@@ -47,8 +93,20 @@
 			</script>
 		</div>
 		<hr></hr>
-		<div id="div3">
+		<div id="div3" class="demoContainer">
 		<a href="#div3">Upload with custom file name</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div3"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div3').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			fileName:'userFile'
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
 			<div id="target-div3"></div>
 			<script>
 				$('#target-div3').JSAjaxFileUploader({
@@ -58,8 +116,21 @@
 			</script>
 		</div>
 		<hr></hr>
-		<div id="div4">
+		<div id="div4" class="demoContainer">
 		<a href="#div4">Restrict file types and file size</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div4"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div4').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			maxFileSize:512000,	//Max 500 KB file
+			allowExt: 'gif|jpg|jpeg|png'	//allowing only images for upload
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
 			<div id="target-div4"></div>
 			<script>
 				$('#target-div4').JSAjaxFileUploader({
@@ -70,8 +141,20 @@
 			</script>
 		</div>
 		<hr></hr>
-		<div id="div5">
+		<div id="div5" class="demoContainer">
 		<a href="#div5">Upload with form data</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div5"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div5').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			formData:{field1:'value1',field2:'value2',fieldN:'valueN'}
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
 			<div id="target-div5"></div>
 			<script>
 				$('#target-div5').JSAjaxFileUploader({
@@ -81,8 +164,20 @@
 			</script>
 		</div>
 		<hr></hr>
-		<div id="div6">
+		<div id="div6" class="demoContainer">
 		<a href="#div6">Custom Animation Speed</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div6"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div6').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			closeAnimationSpeed: 1000 //In milli seconds 1000 ms = 1 second
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
 			<div id="target-div6"></div>
 			<script>
 				$('#target-div6').JSAjaxFileUploader({
@@ -92,8 +187,22 @@
 			</script>
 		</div>
 		<hr></hr>
-		<div id="div7">
+		<div id="div7" class="demoContainer">
 		<a href="#div7">Enable/Disable Enlarged image preview</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div7"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div7').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			zoomPreview:true,
+			zoomWidth:360,
+			zoomHeight:360
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
 			<div id="target-div7"></div>
 			<script>
 				$('#target-div7').JSAjaxFileUploader({
@@ -105,8 +214,26 @@
 			</script>
 		</div>
 		<hr></hr>
-		<div id="div8">
+		<div id="div8" class="demoContainer">
 		<a href="#div8">Advance File Upload Control</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div8"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div8').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			beforesend:function(file){$('#result').append('Before Send Executed : File -> '+JSON.stringify(file));},
+			always:function(file){$('#result').append('Always Executed : File -> '+JSON.stringify(file));},
+			done:function(file,xhr){$('#result').append('Done Executed : File -> '+JSON.stringify(file));},
+			fail:function(response){$('#result').append('Fail Send Executed : response -> '+response);},
+			complete:function(file,xhr){$('#result').append('Complete Executed : File -> '+JSON.stringify(file));}, 
+			success:function(response){$('#result').append('Success Executed : response -> '+response);}, 
+			error:function(response){$('#result').append('Error Executed : response -> '+response);}
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
 			<div id="target-div8"></div>
 			<script>
 				$('#target-div8').JSAjaxFileUploader({
@@ -120,7 +247,9 @@
 					error:function(response){$('#result').append('Error Executed : response -> '+response+'<br /><br />');}
 				});
 			</script>
-			<div id="result" style="height: 170px;overflow: auto;"></div>
+			<div id="result" style="height: 170px;overflow: auto;">
+			<h5>Logs : _</h5>
+			</div>
 		</div>
 	</body>
 </html>
