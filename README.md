@@ -39,7 +39,7 @@ Using JSAjaxFileUploader jQuery plugin you can enable large view of the image du
 
 ## Installation
 
-Download the All the files from repository and the copy 'img' folder and "JQuery.JSAjaxFileUploader.css" and "JQuery.JSAjaxFileUploader.js" or "JQuery.JSAjaxFileUploader.min.js" to you project folder and include scripts after the jQuery library
+Download all the files from repository and the copy 'img' folder and "JQuery.JSAjaxFileUploader.css" and "JQuery.JSAjaxFileUploader.js" or "JQuery.JSAjaxFileUploader.min.js" to you project folder and include scripts after the jQuery library
 
 ```html
   <script src="/path/to/JQuery.JSAjaxFileUploader.js"></script>
