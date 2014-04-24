@@ -1,7 +1,7 @@
 JSAjaxFileUploader
 ==================
 
-JSAjaxFileUploader is a jQuery Plugin with ease of use. Just Download the  plugin include it in your project and thats it you are all set to use it.
+JSAjaxFileUploader is a jQuery Plugin with ease of use. Just Download the  plugin include it in your project and thats it you are all set to use it. It's designed for developers to allow for easy integration and modification.
 
 Fully customizable with many options. using  JSAjaxFileUploader jQuery plugin you can have multiple upload forms in a same web page at the same time and you can also select multiple files for upload.
 
