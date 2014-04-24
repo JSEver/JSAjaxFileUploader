@@ -57,8 +57,8 @@ Then simply bind the uploader to the added element as shown below
 
 ```javascript
   $('#testId').JSAjaxFileUploader({
-        uploadUrl:'uploadImagesAction'
-    });
+      uploadUrl:'uploadImagesAction'
+  });
 ```
 
 For more Advanced usage please check the demo file online here http://jseverdemo.0fees.net/JSAjaxFileUploader/Demo.html
