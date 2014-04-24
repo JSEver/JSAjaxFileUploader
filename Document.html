@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<style>
+ul.noStyle {list-style: none;}
+ul.
+.accordiansContent{dispaly:none}
+.openContent{dispaly:block}
+#accordiansId li.accordiansLi h4{cursor:pointer;background: rgb(250, 206, 125);color: rgb(228, 114, 9);padding: 5px 15px;}
+#accordiansId li.accordiansLi ul li div ul li{color:  rgb(221, 221, 221);}
+table.discTable{width:100%;}
+.discTable th{text-align:center}
+table.discTable, .discTable td, .discTable th{border:1px solid green;border-collapse: collapse;}
+.discTable th{background-color:green;color:white;}
+</style>
+	
+<div class="separator" style="clear: both; text-align: center;">
+	<span style="font-size: large;" title="JS HTML 5 Ajax file upload with Progress Bar">
+	<a href="http://2.bp.blogspot.com/-23zwL2nwzC4/U1gY6xvoptI/AAAAAAAAAC8/eZvVX4VjPjI/s1600/screenShot2.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+	<img border="0" src="http://2.bp.blogspot.com/-23zwL2nwzC4/U1gY6xvoptI/AAAAAAAAAC8/eZvVX4VjPjI/s1600/screenShot2.png" style="width:550px;height:300px" /></a>
+	</span>
+</div>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+	<span style="font-size: large;" title="JS HTML 5 Ajax file upload with Progress Bar">
+	<a href="http://1.bp.blogspot.com/-7vRO60qy5cE/U1gY6VTIA1I/AAAAAAAAAC0/d1mG_bPuwpw/s1600/screenShot1.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+	<img border="0" src="http://1.bp.blogspot.com/-7vRO60qy5cE/U1gY6VTIA1I/AAAAAAAAAC0/d1mG_bPuwpw/s1600/screenShot1.png" style="width:550px;height:300px" /></a>
+	</span>
+</div>
+
+	<ul id="accordiansId" class="noStyle">
+		<li class="accordiansLi">
+			<h4>Overview</h4>
+			<ul class="accordiansContent" class="noStyle">
+				<li class="parentLi">
+					<h5>Features</h5>
+					<div>
+						<ul>
+							<li>Plug And Play Setup</li>
+							<li>Lightweight (7.3 KB minified version)</li>
+							<li>No Flash required</li>
+							<li>Upload with progress bar and image preview</li>
+							<li>Multiple File Upload Support</li>
+							<li>Multiple independent file uploaders on one page</li>
+							<li>Can upload largege files</li>
+							<li>Multiple callback listeners</li>
+							<li>Fully Customizable</li>
+							<li>Can be used with Phonegap/Cordova apps</li>
+							<li>Suitable for mobile development</li>
+							<li>Flexible event system</li>
+							<li>Ready for jQuery, PHP, ASP.net, Java and others</li>
+							<li>Free for personal and commercial use and much more...</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li class="accordiansLi">
+			<h4>Documentation</h4>
+			<ul class="accordiansContent" class="noStyle">
+				<li class="parentLi" style="display:none">
+				<h5>Developer Guide</h5>
+				<div>
+					<p>Implementing ajax file upload with JSAjaxFileUploader is easy hence called as Plug And Play Plugin.</p>
+					<p>Simple add an HTML element and bind the plugin to the HTML element and you are done.</p>
+					<p>The most useful part of the plugin are it's callback functions listed below. which gives you complete control over each file which is being uploaded.</p>
+					<table class="discTable">
+					<tr><th style="width:20%">Param Name</th><th style="width:30%">Default</th><th style="width:50%">Discription</th></tr>
+					<tr><td>uploadUrl</td><td>null</td><td>URL to which files must be uploaded (same as form action attribut)</td></tr>
+					<tr><td>fileName</td><td>file</td><td>Name of the input</td></tr>
+					<tr><td>inputText</td><td>Select Files...</td><td>Text to be displayed on file selector</td></tr>
+					<tr><td>formData</td><td> - </td><td>Extra form data to be sent with each file (JSON data, other serialised data support will be added soon)</td></tr>
+					<tr><td>allowExt</td><td>gif|jpg|jpeg|png|bmp|mp4|mp3|pdf|doc|docx|xcl|txt</td><td>File extension to be allowed</td></tr>
+					<tr><td>maxFileSize</td><td>5242880</td><td>Mazimum size of each file to be allowed in Bytes Default 5MB</td></tr>
+					<tr><td>showProgress</td><td>true</td><td>To show or hide progressbar</td></tr>
+					<tr><td>closeAnimationSpeed</td><td>500</td><td>animation speed in milliseconds</td></tr>
+					<tr><td>zoomPreview</td><td>true</td><td>Enable/Disable Image enlarged preview on mouse over</td></tr>
+					<tr><td>zoomWidth</td><td>160</td><td>Width of previewed image in pixels used only if zoomPreview:true</td></tr>
+					<tr><td>zoomHeight</td><td>170</td><td>Height of previewed image in pixels used only if zoomPreview:true</td></tr>
+					<tr><td>beforesend</td><td> function(file){} </td><td>Finction to be executed before each upload begins, for more information please reffer AJAX Doc</td></tr>
+					<tr><td>always</td><td> function(file){} </td><td>Finction to be executed always for each upload, for more information please reffer AJAX Doc</td></tr>
+					<tr><td>done</td><td> function(file,xhr){} </td><td>Finction to be executed when ajax cal is done, for more information please reffer AJAX Doc</td></tr>
+					<tr><td>fail</td><td> function(response){} </td><td>Finction to be executed on ajax fail for each upload, for more information please reffer AJAX Doc</td></tr>
+					<tr><td>progress</td><td> function(file,event){} </td><td>Finction to be executed during upload is in progress, 'file' object contains all information of the file being uploaded and 'event' object contains all info like total file size and total bytes uploaded etc. </td></tr>
+					<tr><td>complete</td><td> function(file,xhr){} </td><td>Finction to be executed after ajax is completed. complete will execute not matter ajax fails or succeeds, for more information please reffer AJAX Doc</td></tr>
+					<tr><td>success</td><td> function(response){} </td><td>Finction to be executed if ajax status returs 200, for more information please reffer AJAX Doc</td></tr>
+					<tr><td>error</td><td> function(response){} </td><td>Finction to be executed on ajax error, for more information please reffer AJAX Doc</td></tr>
+					</table>
+				</div>
+				</li>
+			</ul>
+		</li>
+		<li class="accordiansLi">
+			<h4>Demo</h4>
+			<ul class="accordiansContent" class="noStyle">
+				<li class="parentLi" style="display:none"> 
+				<div>
+					<p>A basic working example can be found in the <a href="http://jseverdemo.0fees.net/JSAjaxFileUploader" target="_blank">Live Demo</a></p>
+					<p>Check here for <a href="http://jseverdemo.0fees.net/JSAjaxFileUploader/Demo.html" target="_blank" >Live Demo</a> with all parmeters in action</p>
+				</div>
+				</li>
+			</ul>
+		</li>
+		<li class="accordiansLi">
+			<h4>Download</h4>
+			<ul class="accordiansContent" class="noStyle">
+				<li class="parentLi" style="display:none">
+				<div>
+					Grab the full source code with demo file from <a href="https://github.com/JSEver/JSAjaxFileUploader" target="_blank" >GitHub repository Download Now</a>
+				</div>
+				</li>
+			</ul>
+		</li>
+		<li class="accordiansLi">
+			<h4>Tested On Browsers</h4>
+			<ul class="accordiansContent" class="noStyle">
+				<li class="parentLi" style="display:none">
+				<div>
+					<h5>Passed on</h5>
+					<ul>
+						<li>Internet Explorer: Win7: V10, V11</li>
+						<li>Firefox: Win7: 28.0</li>
+						<li>Chrome: XP SP2 x64: 30.0</li>
+						<li>Opera: XP SP2 x64: 18.0</li>
+						<li>Safari: Win7 SP1: 5.1.7</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	</body>
+	<script type="text/javascript">
+		$('#accordiansId li.accordiansLi h4').click(function(e){
+			e.preventDefault();
+			$(this).parent().find('ul.accordiansContent li.parentLi').slideToggle('normal');
+		});
+	</script>
+</html>
