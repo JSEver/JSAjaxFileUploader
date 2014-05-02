@@ -56,5 +56,5 @@ For more Advanced usage please check the demo file online here http://jseverdemo
 
 For any Comments, suggestions, queries or to request for a new jQuery Plugin visit http://jsever.blogspot.in/
 
-## Authors
+## Author
 JS Ever
