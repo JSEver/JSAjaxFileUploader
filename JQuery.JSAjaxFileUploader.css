@@ -1,6 +1,6 @@
 .JSUploadForm{background: #FFF;width: inherit;padding: 20px 30px 5px 30px;box-shadow: rgba(122, 122, 122, 0.7) 0 3px 10px -1px;-webkit-box-shadow: rgba(122, 122, 122, 0.7) 0 3px 10px -1px;color: #666;overflow: auto;}
 .JSUploadForm .JSFileChoos{display: inline-block;cursor:pointer; line-height: 1;padding: 7px 10px;text-decoration: none;font-weight: bold;color: #fff;background-color: #39c;-moz-border-radius: 5px;-webkit-border-radius: 5px;-khtml-border-radius: 5px;border-radius: 5px;}
-.JSUploadForm .JSpreveiw{margin-top: 10px;}
+.JSUploadForm .JSpreveiw{margin-top: 10px;margin-left: -40px;}
 .JSUploadForm ul.JSpreveiw{list-style-type: none;}
 .JSUploadForm ul.JSpreveiw li{width: inherit;border-bottom: 1px solid rgb(78, 78, 78);padding: 10px;overflow: auto;background-color: rgb(26, 22, 22);}
 .JSUploadForm ul.JSpreveiw li span{color: #fff;}
@@ -10,7 +10,8 @@
 .JSUploadForm ul.JSpreveiw li > div:first-child{width: 8%;}
 .JSUploadForm ul.JSpreveiw li > div{width: 80%;float:left;position: relative;float: left;}
 .JSUploadForm ul.JSpreveiw li div img{border: 1px solid rgba(255, 255, 255, 0.65);}
-.JSFileProgress {width: 0%;height: 5px;background-image: linear-gradient(#A4BDE4 20%, #1650AC 90%);}
+.JSProgressBarParent{background: #5A5A5A;height: 10px;}
+.JSFileProgress {width: 0%;height: 10px;background-image: linear-gradient(#A4BDE4 20%, #1650AC 90%);}
 .JSnotAllowed{color: red !important;}
 .JSUploadForm ul.JSpreveiw li span.JSOprIcons{float: right;}
 .JSUploadForm ul.JSpreveiw li span.JSOprIcons img{margin-right: 5px;cursor: pointer;width: 15px}

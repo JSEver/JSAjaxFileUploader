@@ -41,6 +41,7 @@
 	<body>
 		<h4>Demo</h4>
 		<ul>
+			<li><h4>V1.0 Features</h4></li>
 			<li><a href="#div1">Basic Uploader</a></li>
 			<li><a href="#div2">Custom file selector Name</a></li>
 			<li><a href="#div3">Upload with custom file name</a></li>
@@ -49,6 +50,9 @@
 			<li><a href="#div6">Custom Animation Speed</a></li>
 			<li><a href="#div7">Enable/Disable Enlarged image preview</a></li>
 			<li><a href="#div8">Advance File Upload Control</a></li>
+			<li><h4>V1.01 Featur Added</h4></li>
+			<li><a href="#div9">Synchronous Upload Support Added</a></li>
+			<li>Improved Performance</li>
 		</ul>
 
 		<div id="div1" class="demoContainer">
@@ -250,6 +254,35 @@
 			<div id="result" style="height: 170px;overflow: auto;">
 			<h5>Logs : _</h5>
 			</div>
+		</div>
+		<hr></hr>
+		<div id="div9" class="demoContainer">
+		<a href="#div9">Upload with form data</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div9"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div9').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			syncUploads: true;
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
+			<div id="target-div5"></div>
+			Turn Synchronous Uploads : <input type="radio" name="sync" value="true" onchange="refreshUploader(this.value)" checked>On <input type="radio"  onchange="refreshUploader(this.value)" name="sync" value="false" >Off
+			<script>
+				function refreshUploader(syncUploads){
+					$('#target-div5').JSAjaxFileUploader({
+					uploadUrl:'upload.php',
+					syncUploads: syncUploads;
+				});
+				}
+				$(function(){
+					refreshUploader(true);
+				});
+			</script>
 		</div>
 	</body>
 </html>
