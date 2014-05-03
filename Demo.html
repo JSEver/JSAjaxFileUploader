@@ -270,14 +270,14 @@
 	&lt;/script&gt;
 				</pre>
 			</div>
-			<div id="target-div5"></div>
 			Turn Synchronous Uploads : <input type="radio" name="sync" value="true" onchange="refreshUploader(this.value)" checked>On <input type="radio"  onchange="refreshUploader(this.value)" name="sync" value="false" >Off
+			<div id="target-div9"></div>
 			<script>
 				function refreshUploader(syncUploads){
-					$('#target-div5').JSAjaxFileUploader({
-					uploadUrl:'upload.php',
-					syncUploads: syncUploads;
-				});
+					$('#target-div9').JSAjaxFileUploader({
+						uploadUrl:'upload.php',
+						syncUploads: syncUploads
+					});
 				}
 				$(function(){
 					refreshUploader(true);

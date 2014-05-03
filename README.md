@@ -16,13 +16,13 @@ Using JSAjaxFileUploader jQuery plugin you can enable large view of the image du
 4. Upload with progress bar and image preview
 5. Multiple File Upload Support
 6. Multiple independent file uploaders on one page
-7. Can upload largeger files
+7. Can upload largege files
 8. Multiple callback listeners
 9. Fully Customizable
 10. Can be used with Phonegap/Cordova apps
 11. Suitable for mobile development
 12. Flexible event system
-13. Ready for PHP, ASP.net, Java and others
+13. Ready for jQuery, PHP, ASP.net, Java and others
 14. Free for personal and commercial use and much more...
 
 
@@ -56,5 +56,5 @@ For more Advanced usage please check the demo file online here http://jseverdemo
 
 For any Comments, suggestions, queries or to request for a new jQuery Plugin visit http://jsever.blogspot.in/
 
-## Author
+## Authors
 JS Ever

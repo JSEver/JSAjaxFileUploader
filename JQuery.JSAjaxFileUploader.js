@@ -86,7 +86,7 @@ THE SOFTWARE.*/
 	 };
 	return this.each(function(){
 		var JSNode = $(this);
-		JSNode.append(form.join(''));
+		JSNode.html(form.join(''));
 		$.filePool[JSNode] = [];
 		$.filePool[JSNode+'uploading'] = false;
 		$('form input[type="file"]',JSNode).change(function(event){
