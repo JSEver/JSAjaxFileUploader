@@ -21,7 +21,7 @@
 	border: 1px solid gray;
 	background: rgb(233, 233, 233);
 }
-.demoContainer a{
+.demoContainer a.titleA{
 	font-size: 20px;
 	text-decoration: inherit;
 	color: crimson;
@@ -43,6 +43,7 @@
 		<ul>
 			<li><h4>V1.0 Features</h4></li>
 			<li><a href="#div1">Basic Uploader</a></li>
+			<li><a href="#div1-1">Manual Upload Initiate Button</a></li>
 			<li><a href="#div2">Custom file selector Name</a></li>
 			<li><a href="#div3">Upload with custom file name</a></li>
 			<li><a href="#div4">Restrict file types and file size</a></li>
@@ -56,7 +57,7 @@
 		</ul>
 
 		<div id="div1" class="demoContainer">
-			<a href="#div1">Basic Uploader</a>
+			<a href="#div1" class="titleA">Basic Uploader</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>
@@ -74,8 +75,30 @@
 			</script>
 		</div>
 		<hr></hr>
+		<div id="div1-1" class="demoContainer">
+			<a href="#div1-1" class="titleA">Manual Upload Initiate Button</a>
+			<div class="codeDiv">
+				<h5>Example Code:</h5>
+				<pre>
+	&lt;div id="target-div1-1"&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$('#target-div1').JSAjaxFileUploader({
+			uploadUrl:'upload.php',
+			autoSubmit:false,	//to disable auto submit
+			uploadTest:'Start Upload'
+		});
+	&lt;/script&gt;
+				</pre>
+			</div>
+			<div id="target-div1-1"></div>
+			<script>
+				$('#target-div1-1').JSAjaxFileUploader({uploadUrl:'upload.php',autoSubmit:false,uploadTest:'Start Upload'});
+			</script>
+		</div>
+		<hr></hr>
+		
 		<div id="div2" class="demoContainer">
-		<a href="#div2">Custom file selector Name</a>
+		<a href="#div2" class="titleA">Custom file selector Name</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>
@@ -98,7 +121,7 @@
 		</div>
 		<hr></hr>
 		<div id="div3" class="demoContainer">
-		<a href="#div3">Upload with custom file name</a>
+		<a href="#div3" class="titleA">Upload with custom file name</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>
@@ -121,7 +144,7 @@
 		</div>
 		<hr></hr>
 		<div id="div4" class="demoContainer">
-		<a href="#div4">Restrict file types and file size</a>
+		<a href="#div4" class="titleA">Restrict file types and file size</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>
@@ -146,7 +169,7 @@
 		</div>
 		<hr></hr>
 		<div id="div5" class="demoContainer">
-		<a href="#div5">Upload with form data</a>
+		<a href="#div5" class="titleA">Upload with form data</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>
@@ -169,7 +192,7 @@
 		</div>
 		<hr></hr>
 		<div id="div6" class="demoContainer">
-		<a href="#div6">Custom Animation Speed</a>
+		<a href="#div6" class="titleA">Custom Animation Speed</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>
@@ -192,7 +215,7 @@
 		</div>
 		<hr></hr>
 		<div id="div7" class="demoContainer">
-		<a href="#div7">Enable/Disable Enlarged image preview</a>
+		<a href="#div7" class="titleA">Enable/Disable Enlarged image preview</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>
@@ -219,7 +242,7 @@
 		</div>
 		<hr></hr>
 		<div id="div8" class="demoContainer">
-		<a href="#div8">Advance File Upload Control</a>
+		<a href="#div8" class="titleA">Advance File Upload Control</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>
@@ -257,7 +280,7 @@
 		</div>
 		<hr></hr>
 		<div id="div9" class="demoContainer">
-		<a href="#div9">Upload with form data</a>
+		<a href="#div9" class="titleA">Upload with form data</a>
 			<div class="codeDiv">
 				<h5>Example Code:</h5>
 				<pre>

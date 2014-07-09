@@ -1,5 +1,6 @@
 .JSUploadForm{background: #FFF;width: inherit;padding: 20px 30px 5px 30px;box-shadow: rgba(122, 122, 122, 0.7) 0 3px 10px -1px;-webkit-box-shadow: rgba(122, 122, 122, 0.7) 0 3px 10px -1px;color: #666;overflow: auto;}
-.JSUploadForm .JSFileChoos{display: inline-block;cursor:pointer; line-height: 1;padding: 7px 10px;text-decoration: none;font-weight: bold;color: #fff;background-color: #39c;-moz-border-radius: 5px;-webkit-border-radius: 5px;-khtml-border-radius: 5px;border-radius: 5px;}
+.JSUploadForm .JSFileChoos,.startJSuploadButton{display: inline-block;cursor:pointer; line-height: 1;padding: 7px 10px;text-decoration: none;font-weight: bold;color: #fff;background-color: #39c;-moz-border-radius: 5px;-webkit-border-radius: 5px;-khtml-border-radius: 5px;border-radius: 5px;}
+.JSFileCount{margin: 0 20% 0 2%;}
 .JSUploadForm .JSpreveiw{margin-top: 10px;margin-left: -40px;}
 .JSUploadForm ul.JSpreveiw{list-style-type: none;}
 .JSUploadForm ul.JSpreveiw li{width: inherit;border-bottom: 1px solid rgb(78, 78, 78);padding: 10px;overflow: auto;background-color: rgb(26, 22, 22);}

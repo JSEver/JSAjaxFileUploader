@@ -25,6 +25,8 @@ THE SOFTWARE.*/
 	fileName:'file', //File name of the upload file 
     inputText:'Select Files...', //Text on file select button
     formData:{},		//Any extra data to be sent with each uploaded file
+    autoSubmit:true,	//If set to true then uploads starts as soon as a file is selected
+    uploadTest:'Start Upload',	//Text to be displayed on upload button
 	allowExt: 'gif|jpg|jpeg|png|bmp|mp4|mp3|pdf|doc|docx|xsl|txt',	//File extension to be allowed for upload you can specify n number file types
 	maxFileSize: 5242880,	//Restrict each file size, default 5 MB in Bytes
 	beforesend:function(file){}, //function to be executed before each upload for more info please refer https://api.jquery.com/jQuery.ajax/
@@ -47,10 +49,10 @@ THE SOFTWARE.*/
 	 var settings = $.extend( {}, defaults, options );
 	 var JSAjaxFileUploader = this;
 	 var form = ['<form method="post" class="JSUploadForm" enctype="multipart/form-data" action=',settings.url,'>',
-				'<label class="JSFileChoos"><input type="file" multiple style="display:none"/>',settings.inputText,'</label><ul class="JSpreveiw"></ul></form>'];
-	 this.onChange = function(JSNode,e){
-		for (var i = 0; i < e.originalEvent.target.files.length; i++){
-			var file = e.originalEvent.target.files[i];
+				'<label class="JSFileChoos"><input type="file" multiple style="display:none"/>',settings.inputText,'</label>',(settings.autoSubmit ? '' : '<label class="JSFileCount"></label><a href="#" class="startJSuploadButton" >'+settings.uploadTest+'</a>'),'<ul class="JSpreveiw"></ul></form>'];
+	 this.onChange = function(JSNode,files){
+		for (var i = 0; i < files.length; i++){
+			var file = files[i];
 			var re = new RegExp('.('+settings.allowExt+')$', "i");
 			var $JSView = $('form ul.JSpreveiw',JSNode);
 			elementId++;
@@ -89,10 +91,24 @@ THE SOFTWARE.*/
 		JSNode.html(form.join(''));
 		$.filePool[JSNode] = [];
 		$.filePool[JSNode+'uploading'] = false;
-		$('form input[type="file"]',JSNode).change(function(event){
-			JSAjaxFileUploader.onChange(JSNode,event);
-			$(this).val('');
-		});
+		if(settings.autoSubmit)
+			$('form input[type="file"]',JSNode).change(function(event){
+				JSAjaxFileUploader.onChange(JSNode,event.originalEvent.target.files);
+				$(this).val('');
+			});
+		else{
+			var filesSelected=null;
+			$('form input[type="file"]',JSNode).change(function(event){
+				filesSelected = event.originalEvent.target.files;
+				$('form label.JSFileCount',JSNode).html(filesSelected.length+' file(s) selected');
+			});
+			$('form .startJSuploadButton',JSNode).click(function(event){
+				event.preventDefault();
+				if(filesSelected == null || filesSelected == undefined || filesSelected.length <= 0){alert('No Files Selected'); return;}
+				JSAjaxFileUploader.onChange(JSNode,filesSelected);
+				$(this).val('');
+			});
+		}
 	});
  };
 
